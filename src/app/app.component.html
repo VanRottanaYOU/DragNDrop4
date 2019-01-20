@@ -21,8 +21,22 @@
   </footer>
 </section>
 
+<table>
+  <thead>
+    <th>Groups Nameeeeee</th>
+    <th>Groups Itemssssss</th>
+  </thead>
+  <tbody dnd-sortable-container [sortableData]="todos">
+    <tr *ngFor="let todo of todos; let i = index" class="todo-item" [class.completed]="todo.complete" dnd-sortable
+      [sortableIndex]="i" [dragEnabled]="true" [dragData]="todo" dnd-droppable (onDropSuccess)="onMove($event, i)">
+      <td>{{todo.title}}</td>
+      <td>{{todo.title}}</td>
+    </tr>
+  </tbody>
+</table>
 
-<ng-template>
+
+<ng-template ngIf="1 == 1">
 <table>
   <thead>
     <th>Groups Name</th>
